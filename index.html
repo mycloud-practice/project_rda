@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine Circuit Puzzle 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="bg-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="container">
+
+  <!-- Intro Screen -->
+  <div class="card active" id="intro">
+    <h1>Welcome!</h1>
+    <p>Complete the circuit by solving riddles to light up the heart! ⚡❤️</p>
+    <button onclick="nextStep()">Start →</button>
+  </div>
+
+  <!-- Circuit Puzzle Screen -->
+  <div class="card" id="circuit-card">
+    <h2>Interactive Circuit Challenge</h2>
+    <p>Click each switch to solve its riddle and let the current flow!</p>
+
+    <div class="circuit-container">
+      <div class="battery">🔋</div>
+
+      <div class="wire" id="wire1"></div>
+      <div class="switch" id="switch1" onclick="openRiddle(1)">Switch 1: 🔒</div>
+
+      <div class="wire" id="wire2"></div>
+      <div class="switch" id="switch2" onclick="openRiddle(2)">Switch 2: 🔒</div>
+
+      <div class="wire" id="wire3"></div>
+      <div class="switch" id="switch3" onclick="openRiddle(3)">Switch 3: 🔒</div>
+
+      <div class="wire" id="wire4"></div>
+      <div class="heart" id="heart">❤️</div>
+    </div>
+
+    <p id="feedback" class="feedback"></p>
+  </div>
+
+  <!-- Final Valentine Messages -->
+  <div class="card" id="final">
+    <h1>💖 Heart Activated! 💖</h1>
+    <div id="messages" class="messages-container">
+      <div class="message">Hi Shraddha,</div>
+      <div class="message">I might not always know what you’re thinking, but I built this little circuit just to wish you something special! ⚡</div>
+      <div class="message">We’re getting to know each other, and I really enjoy it. Even if I don’t always show it, it doesn’t mean I don’t care. 💡</div>
+      <div class="message">This little surprise is my way of saying… Happy Valentine’s Day, Shraddha! ❤️</div>
+      <div class="message">Every connection counts, just like every little moment we share. I hope this brings a smile to your day. 😊</div>
+      <div class="message">Just like a circuit needs the right connections to light up, I hope we keep making little sparks together! ⚡❤️</div>
+      <div class="message">I look forward to learning more about you, sharing little laughs, and creating fun memories—step by step, connection by connection. 🌟</div>
+      <div class="message">So here’s to small circuits, bright hearts, and happy moments together. 💖</div>
+      <div class="message">Even if it’s a tiny gesture, I hope it brightens your day as much as thinking of you brightens mine. 🌷</div>
+      <div class="message">Thank you for being you, and for the little spark you bring into every moment. 💫</div>
+      <div class="message">May this Valentine be full of joy, laughter, and tiny electric sparks! 🔋❤️</div>
+    </div>
+  </div>
+
+  <!-- Riddle Modal -->
+  <div id="riddleModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRiddle()">&times;</span>
+      <p id="riddleQuestion"></p>
+      <div id="riddleOptions" class="options"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
